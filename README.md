@@ -136,16 +136,6 @@ Backend:  http://localhost:5000
 * [ ] AI-powered tools
 * [ ] Mobile application
 
-## 🤝 Contributing
-
-Contributions are welcome.
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Commit and push
-5. Open a Pull Request
-
 ## 📄 License
 
 This project is licensed under the MIT License.
