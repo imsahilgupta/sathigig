@@ -5,18 +5,33 @@
   color-scheme: light;
   --brand-navy: #0f2a6d;
   --brand-red: #d93a3a;
-  --brand-soft: #f8fafc;
+  --brand-soft: #ffffff;
+  --brand-ink: #0f172a;
+  --brand-muted: #475569;
+  --brand-border: #e2e8f0;
+  --brand-accent: #7c3aed;
+  --font-sans: "Parkinsans", sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
+  background: #ffffff;
 }
 
 body {
   margin: 0;
-  background: var(--brand-soft);
-  color: #0f172a;
-  font-family: var(--font-inter), sans-serif;
+  min-height: 100vh;
+  background: #ffffff;
+  color: var(--brand-ink);
+  font-family: var(--font-sans);
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-sans);
 }
 
 a[href],
@@ -33,7 +48,14 @@ img {
   max-width: 100%;
 }
 
+input,
+textarea,
+select {
+  color: var(--brand-ink);
+  background: #ffffff;
+}
+
 ::selection {
-  background: rgba(217, 58, 58, 0.18);
-  color: #0f172a;
+  background: rgba(124, 58, 237, 0.18);
+  color: var(--brand-ink);
 }

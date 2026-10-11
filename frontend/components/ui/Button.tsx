@@ -17,17 +17,17 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 };
 
 const baseStyles =
-  "inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50";
+  "inline-flex items-center justify-center gap-2 rounded-xl font-semibold shadow-sm transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50";
 
 const variants: Record<ButtonVariant, string> = {
   primary:
-    "bg-purple-600 text-white hover:bg-purple-700",
+    "bg-violet-700 text-white hover:bg-violet-800 shadow-violet-200",
   secondary:
-    "bg-gray-100 text-gray-900 hover:bg-gray-200",
+    "bg-slate-900 text-white hover:bg-slate-800 shadow-slate-200",
   outline:
-    "border border-gray-300 bg-transparent text-gray-900 hover:bg-gray-100",
+    "border border-slate-300 bg-white text-slate-800 hover:bg-slate-50 hover:border-slate-400",
   ghost:
-    "bg-transparent text-gray-700 hover:bg-gray-100",
+    "bg-transparent text-slate-700 hover:bg-slate-100",
   danger:
     "bg-red-600 text-white hover:bg-red-700",
 };
