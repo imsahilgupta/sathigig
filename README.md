@@ -1,154 +1,126 @@
-# 🇳🇵 SathiGig
+# SathiGig
 
-> **Connect. Collaborate. Earn — Made for Nepal.**
+SathiGig is a Nepal-focused freelance marketplace that connects freelancers with employers, businesses, and clients. The platform supports role-based dashboards for freelancers, employers, and admins, and uses a Next.js frontend with a FastAPI backend and MongoDB.
 
-SathiGig is a Nepal-focused freelance marketplace that connects skilled freelancers with clients, startups, businesses, and organizations. Freelancers can showcase their skills, create gigs, apply for jobs, and manage projects, while clients can post jobs, hire talent, communicate, and make secure payments in Nepalese Rupees (NPR).
+## Tech Stack
 
-## ✨ Features
+### Frontend
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS
 
-* 🔐 Secure authentication with JWT
-* 👥 Freelancer, Client, and Admin roles
-* 💼 Job posting and job search
-* 📩 Proposal and hiring system
-* 🛍️ Fixed-price freelance gigs
-* 👤 Professional freelancer profiles
-* 📁 Portfolio and file uploads
-* 💬 Real-time messaging
-* 📊 Freelancer and client dashboards
-* 📌 Project and milestone management
-* 💳 NPR-based local payment support
-* ⭐ Ratings and reviews
-* 🔔 Real-time notifications
-* 🛡️ User verification and dispute management
-* 🤖 AI-powered proposal and skill tools
-* 📱 Fully responsive design
-* 🌙 Dark mode
+### Backend
+- FastAPI
+- Python 3.11+
+- MongoDB with PyMongo
+- JWT authentication
+- Pydantic
 
-## 🧰 Tech Stack
-
-**Frontend**
-
-* Next.js
-* React
-* TypeScript
-* Tailwind CSS
-* Shadcn/UI
-
-**Backend**
-
-* Node.js
-* Express.js
-* MongoDB
-* Mongoose
-
-**Other Technologies**
-
-* JWT and bcrypt
-* Socket.IO
-* Cloudinary
-* eSewa and Khalti
-* Vercel
-* Render or Railway
-
-## 📂 Project Structure
+## Project Structure
 
 ```text
 sathigig/
-├── client/          # Next.js frontend
-├── server/          # Express backend
-├── docs/            # Documentation
+├── backend/
+│   ├── app/
+│   ├── .env
+│   ├── requirements.txt
+│   └── .gitignore
+├── frontend/
+│   ├── app/
+│   ├── components/
+│   ├── lib/
+│   ├── public/
+│   ├── .env.local
+│   ├── .gitignore
+│   └── package.json
 ├── README.md
-└── package.json
+└── .gitignore
 ```
 
-## 🚀 Getting Started
+## Features
+
+- Secure login and logout with JWT cookies
+- Freelancer, employer, and admin role support
+- Protected dashboard routes by role
+- Responsive landing page and account flows
+- MongoDB-backed user records
+- Clean API structure with FastAPI
+
+## Prerequisites
+
+- Node.js 18+
+- npm
+- Python 3.11+
+- MongoDB running locally or remotely
+
+## Setup
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/imsahilgupta/sathigig.git
+git clone <your-repository-url>
 cd sathigig
 ```
 
-### 2. Install dependencies
+### 2. Backend setup
 
 ```bash
-# Frontend
-cd client
-npm install
+cd backend
+python -m venv .venv
+# Windows PowerShell
+.\.venv\Scripts\Activate.ps1
+# macOS/Linux
+# source .venv/bin/activate
 
-# Backend
-cd ../server
-npm install
+pip install -r requirements.txt
 ```
 
-### 3. Configure environment variables
-
-Create a `.env` file inside the `server` directory:
+Create a `.env` file in `backend`:
 
 ```env
-PORT=5000
-MONGO_URI=mongodb://127.0.0.1:27017/sathigig
-JWT_SECRET=your_secure_secret
-CLIENT_URL=http://localhost:3000
-
-CLOUDINARY_CLOUD_NAME=your_cloud_name
-CLOUDINARY_API_KEY=your_api_key
-CLOUDINARY_API_SECRET=your_api_secret
+MONGO_URI=mongodb://localhost:27017/sathigig
+JWT_SECRET=your-secret-key
+JWT_ALGORITHM=HS256
+FRONTEND_URL=http://localhost:3000
 ```
 
-### 4. Run the application
-
-Open two terminals.
-
-**Frontend:**
+Run the backend:
 
 ```bash
-cd client
+uvicorn app.main:app --reload
+```
+
+### 3. Frontend setup
+
+```bash
+cd frontend
+npm install
+```
+
+Create a `.env.local` file in `frontend` if needed:
+
+```env
+NEXT_PUBLIC_API_URL=http://localhost:8000
+```
+
+Run the frontend:
+
+```bash
 npm run dev
 ```
 
-**Backend:**
+## App URLs
 
-```bash
-cd server
-npm run dev
-```
+- Frontend: http://localhost:3000
+- Backend API: http://localhost:8000
+- API docs: http://localhost:8000/docs
 
-The application will be available at:
+## Notes
 
-```text
-Frontend: http://localhost:3000
-Backend:  http://localhost:5000
-```
+- The frontend and backend are configured separately, so they should be started in different terminals.
+- Admin-only access is enforced by role checks in both the API and the frontend route guards.
 
-## 🗺️ Roadmap
+## License
 
-* [ ] User authentication
-* [ ] Role-based access control
-* [ ] Freelancer profiles
-* [ ] Job marketplace
-* [ ] Proposal system
-* [ ] Gig marketplace
-* [ ] Real-time messaging
-* [ ] Local payment integration
-* [ ] Ratings and reviews
-* [ ] AI-powered tools
-* [ ] Mobile application
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
-## 👨‍💻 Author
-
-**Sahil Gupta**
-
-* GitHub: https://github.com/imsahilgupta
-* LinkedIn: https://www.linkedin.com/in/iamsahil2000/
-
----
-
-<p align="center">
-  <strong>Built for Nepal’s Freelancers and Digital Future 🇳🇵</strong>
-</p>
+This project is for local development and learning purposes unless a different license is added later.

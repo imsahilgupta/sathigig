@@ -1,0 +1,39 @@
+
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --brand-navy: #0f2a6d;
+  --brand-red: #d93a3a;
+  --brand-soft: #f8fafc;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--brand-soft);
+  color: #0f172a;
+  font-family: var(--font-inter), sans-serif;
+}
+
+a[href],
+button:not(:disabled),
+[role="button"]:not(:disabled),
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: rgba(217, 58, 58, 0.18);
+  color: #0f172a;
+}
