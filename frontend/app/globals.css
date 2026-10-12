@@ -1,6 +1,7 @@
 
 @import "tailwindcss";
 
+/* Theme tokens: change these values to update the app-wide palette and font. */
 :root {
   color-scheme: light;
   --brand-navy: #0f2a6d;
@@ -13,11 +14,13 @@
   --font-sans: "Parkinsans", sans-serif;
 }
 
+/* Keep page scrolling smooth and the browser canvas white. */
 html {
   scroll-behavior: smooth;
   background: #ffffff;
 }
 
+/* Base page typography, text color, and full-height layout defaults. */
 body {
   margin: 0;
   min-height: 100vh;
@@ -26,6 +29,7 @@ body {
   font-family: var(--font-sans);
 }
 
+/* Apply the same font to form controls, which may not inherit it by default. */
 body,
 button,
 input,
@@ -34,6 +38,7 @@ select {
   font-family: var(--font-sans);
 }
 
+/* Show an interactive cursor on links and enabled controls. */
 a[href],
 button:not(:disabled),
 [role="button"]:not(:disabled),
@@ -43,11 +48,13 @@ input[type="reset"] {
   cursor: pointer;
 }
 
+/* Prevent inline image gaps and keep images within their containers. */
 img {
   display: block;
   max-width: 100%;
 }
 
+/* Keep form text readable and form surfaces consistent with the white theme. */
 input,
 textarea,
 select {
@@ -55,6 +62,7 @@ select {
   background: #ffffff;
 }
 
+/* Selection highlight colors; adjust the accent here if the theme changes. */
 ::selection {
   background: rgba(124, 58, 237, 0.18);
   color: var(--brand-ink);

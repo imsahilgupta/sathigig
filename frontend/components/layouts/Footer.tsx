@@ -18,6 +18,15 @@ const footerGroups = [
     ],
   },
   {
+    title: "Quick Links",
+    links: [
+      { label: "Dashboard", href: "/dashboard" },
+      { label: "Freelancer Hub", href: "/freelancer" },
+      { label: "Employer Portal", href: "/employer" },
+      { label: "Admin", href: "/admin" },
+    ],
+  },
+  {
     title: "SathiGig",
     links: [
       { label: "Home", href: "/" },
@@ -31,7 +40,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-white text-slate-600">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-1">
             <SiteLogo className="!items-center" href={null} />
 
